@@ -4,6 +4,7 @@ export const save = async (agente) => {
     try {
         const [id] = await db('agentes').insert(agente).returning('id');
         return { id, ...agente };
+        
     } catch (error) {
         console.error('Erro ao salvar agente:', error);
         throw error;
