@@ -1,11 +1,9 @@
 // Update with your config settings.
-
-import 'dotenv/config';
-
+require('dotenv').config();
 /**
  * @type { import('knex').Knex.Config }
  */
-export default {
+module.exports = {
   development: {
     client: 'pg',
     connection: {
